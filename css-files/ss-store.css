@@ -1,0 +1,384 @@
+/*Container after navigation bar holding store content*/
+#main {
+	width : 100%;
+	height : 100%;
+	box-sizing : border-box;
+	padding-top : 90px;
+}
+
+/*Div tag inside main with id "mainTop"*/
+#mainTop {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background : rgba(255, 255, 255, 0.8);
+	font-size: 60px;
+	font-weight: 500;
+	text-align: center;
+}
+
+/*hr tags inside main*/
+#main hr {
+	border: 2px solid black;
+	clear: both;
+}
+
+/*Div tag inside main with id "mainMiddle"*/
+#mainMiddle {
+	padding : 20px;
+}
+
+/*Div tag inside mainMiddle with id "checkout"*/
+#checkout {
+	float: right;
+	width: 35.5%;
+}
+
+/*Div tag inside checkout with id "checkoutTop"*/
+#checkoutTop {
+	background : rgba(0, 0, 0, 1);
+	border: 10px solid white;
+	border-bottom: none;
+	padding: 5px 0px 5px 0px;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 10px;
+	color: white;	
+}
+
+/*Div tag inside checkout with id "topImg"*/
+#topImg {
+	border: 10px solid white;
+	border-top: 4px solid white;
+	border-bottom: none;
+	padding: 20px 0px 20px 0px;
+	background : rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+/*Div tag inside checkout with id "checkoutMiddle"*/
+#checkoutMiddle {
+	border: 10px solid white;
+	border-top: none;
+	text-align: center;
+	background : rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+/*Label tags inside checkoutMiddle with class name "personal"*/
+.personal {
+	float : left;
+	clear: both;
+	margin-left: 7%;
+	margin-bottom : 21px;
+	width: 30%;
+	text-align: left;
+	font-weight: 700;
+}
+
+/*Input tags inside checkoutMiddle*/
+#checkoutMiddle input {
+	margin-bottom : 21px;
+	width: 50%;
+}
+
+/*Textarea tags inside checkoutMiddle*/
+#checkoutMiddle textarea {
+	margin-bottom : 21px;
+	width: 50%;
+}
+
+/*Div tag inside checkout with id "checkoutBottom"*/
+#checkoutBottom {
+	background : rgba(255, 255, 255, 1);
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 4px;
+	color: Black;
+}
+
+/*Div tag inside checkoutBottom with id "total"*/
+#total {
+	padding: 5px 0px 5px 0px;
+	font-size: 15px;
+	letter-spacing: 3px;
+}
+
+/*Normal stylings of buttons inside checkoutBottom with class name "handleOrder"*/
+.handleOrder {
+	transition : all 0.3s ease;
+	margin: 10px 0px 10px 0px;
+	border: none;
+	border-radius : 20px;
+	padding: 10px;
+	background : rgba(0, 0, 0, 1);
+	font-size : 20px;
+	font-weight : bold;
+	outline: none; 
+	color : white;
+}
+
+/*Styling for buttons inside checkoutBottom when mouse is hovered*/
+.handleOrder:hover {
+	background : rgba(0, 0, 0, 0.8);
+}
+
+/*Div tag inside checkout with id "orderSummary"*/
+#orderSummary {
+	display: none;
+	margin-top: 20px;
+	border: 10px solid black;
+	background : rgba(0, 0, 0, 1);
+}
+
+/*Div tag inside orderSummary with id "summaryTitle"*/
+#summaryTitle {
+	border: 4px solid white;
+	border-right: none;
+	border-left: none;
+	margin-bottom: 10px;
+	padding: 5px 0px 5px 0px;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 8px;
+	color: white;
+}
+
+/*Div tags inside orderSummary with class name "orderSummaryTop"*/
+.orderSummaryTop {
+	padding: 10px;
+	background : rgba(255, 255, 255, 1);
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+/*Div tag inside orderSummaryTop with id "displayDetails"*/
+#displayDetails {
+	line-height: 30px;	
+	font-weight: 600;
+}
+
+/*Div tag inside orderSummaryTop with id "displaySelectedProducts"*/
+#displaySelectedProducts {
+	line-height: 25px;	
+	font-weight: 500;
+}
+
+/*Div tag inside orderSummary with id "orderSummaryBottom"*/
+#orderSummaryBottom {
+	padding: 10px;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 4px;
+	color: white;
+}
+
+/*Div tag inside orderSummaryBottom with id "finalTotal"*/
+#finalTotal {
+	padding: 5px;
+	font-size: 20px;
+	letter-spacing: 3px;	
+	color: orange;
+}
+
+/*hr tags inside orderSummaryBottom*/
+#orderSummaryBottom hr {
+	border: 2px solid white;
+}
+
+/*Close button inside orderSummaryBottom with id "summaryButton"*/
+#summaryButton {
+	margin-top: 10px;
+	border: none;
+	border-radius : 19px;
+	padding: 8px;
+	background : rgba(255, 255, 255, 1);
+	font-size : 18px;
+	font-weight : bold;
+	outline: none;
+	color : black;
+}
+
+/*Div tag inside mainMiddle with id "products"*/
+#products {
+	float: left;
+	border: 10px solid white;
+	width: 62.9%;
+	background : rgba(0, 0, 0, 0.8);
+}
+
+/*Div tags inside products with class name "productCategories"*/
+.productCategories {
+	clear: both;
+	padding: 5px 20px 5px 20px;
+	background : rgba(0, 0, 0, 1);
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	color: white;
+}
+
+/*hr tags inside products*/
+#products hr {
+	border: 2px solid white;
+}
+
+/*Div tags inside products with class name "productSet"*/
+.productSet {
+	padding: 30px 0px 30px 30px;
+}
+
+/*Div tags inside productSets with class name "productContainer"*/
+.productContainer {
+	float: left;
+	margin: 0 30px 30px 0;
+	border: 8px solid white;
+	width: 250px;
+	background-color: white;
+	text-align: center;
+}
+
+/*p tags inside productContainers with class name "description"*/			
+.description {
+	padding: 5px 0px 5px 0px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+/*p tags inside productContainers with class name "price"*/	
+.price {
+	padding: 5px 0px 10px 0px;
+	font-weight: 700;
+	color: orange;
+}
+
+/*label tags inside productContainers with class name "qtyLabel"*/	
+.qtyLabel {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+/*input tags inside productContainers with class name "qty"*/
+.qty {
+	width: 50px;
+}
+
+/*Add to cart buttons inside productContainers with class name "addCart"*/
+.addCart {
+	transition : all 0.3s ease;
+	margin-top: 15px;
+	border: none;
+	border-radius : 19px;
+	padding: 8px;
+	background : rgba(0, 0, 0, 1);
+	font-size : 18px;
+	font-weight : bold;
+	outline: none; 
+	color : white;
+}
+
+/*Stylings of add to cart button inside productContainer when its hovered*/
+.addCart:hover {
+	background : rgba(0, 0, 0, 0.8);
+}
+
+/*Stylings of add to cart button inside productContainer when its disabled*/
+.addCart:disabled {    
+    background-color: orange;   
+}
+
+/*Div tag inside main with id "mainBottom"*/
+#mainBottom {
+	padding: 0px 20px 20px 20px;
+	clear: both;
+}
+
+/*Div tag inside mainBottom with id "backToTop"*/
+#backToTop {
+	padding: 5px 0px 10px 0px;
+	width: 62.9%;
+	text-align: center;
+	background-color: white;
+}	
+
+/*a tag inside backToTop with id "backToTopButton"*/
+#backToTopButton {
+	text-decoration: none;
+	padding: 10px;
+	font-size : 20px;
+	font-weight : 600;
+	color: black;
+}
+
+/*Stylings of a tag inside backToTop when its hovered*/
+#backToTopButton:hover {
+	color : rgba(0, 0, 0, 0.8);
+}
+
+/*Stylings for footer*/
+.footerBar{
+	background : rgba(0,0,0,0.9);
+	width : 100%;
+}
+
+.footerBar footer{
+	position : relative;
+	display : flex;
+	max-width : calc(100% - 100px);
+	margin : 0 auto;
+	height : 90px;
+	align-items : center;
+	justify-content : space-between;
+}
+
+footer .footerContent{
+	display : flex;
+	align-items : center;
+}
+
+footer .footerContent .links{
+	margin-left : 100px;
+	display : flex;
+	padding-left : 20px;
+}
+
+
+.footerContent .links li{
+	list-style : none;
+	line-height : 70px;
+	padding-left : 200px;
+	color : #fff;
+}
+
+.footerContent .links li a{
+	color : #fff;
+	font-size : 18px;
+	padding : 10px 15px;
+	border-radius : 10px;
+	transition : all 0.3s ease;
+}
+
+
+.footerContent .links li a:hover{
+	color : #000;
+	background : rgba(255,255,255,0.8);
+}
+
+.pageName{
+	color : #fff;
+	font-size : 25px;
+	position : absolute;
+	left : 0px;
+	padding : 10px;
+}
+
+.rights{
+	color : #fff;
+	position : absolute;
+	right : 0px;
+	padding : 10px;
+}

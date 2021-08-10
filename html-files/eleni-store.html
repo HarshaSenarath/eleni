@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>ELENI Store</title>
+		
+		<link rel = "stylesheet" href = "../css-files/ss-navigation-bar.css">
+		<link rel = "stylesheet" href = "../css-files/ss-store.css">
+		<link rel = "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script src="https://kit.fontawesome.com/77ecd00b75.js" crossorigin="anonymous"></script>
+		<script src = "../js-files/js-store.js"></script>
+	</head>
+
+	<body>
+		<!--Start nav bar section-->
+		<div class="navigationBar">
+			<nav>
+				<input type="checkbox" id="showSearch">
+					
+				<div class="navBarContent">
+					<div class="logo"><img src = "../images/navigation-bar/logo.png" class = "logoIcon" alt = "logo"></div>
+					<ul class="linksToPages">
+						<li><a href="eleni-main-page.html">Home</a></li>
+						<li><a href="eleni-image-gallery.html">Gallery</a></li>
+						<li>
+							<a href="#" class="desktop-link">Store</a>
+							<input type="checkbox">
+							<ul>
+								<li><a href="#instruments">Instruments</a></li>
+								<li><a href="#vintageItems">Vintage Items</a></li>
+								<li><a href="#albums">Albums</a></li>
+								<li><a href="#tickets">Tickets</a></li>
+							</ul>
+						</li>
+						<li><a href="eleni-quiz.html">Take Quiz</a></li>
+						<li><a href="eleni-query-form.html">Contact Us</a></li>
+						<li><a href="eleni-student-details.html">About Us</a></li>
+					</ul>
+				</div>
+					
+				<label for="showSearch" class="searchIcon"><i class="fas fa-search"></i></label>
+				<form action="#" class="searchBox">
+					<input type="text" placeholder="Type to Search" required>
+				</form>
+			</nav>
+		</div>
+		
+		<!--Section which contains store contents-->
+		<div id = "main">
+			<!--Top section-->
+			<div id = "mainTop">Welcome To Our Store</div>
+			
+			<hr>
+			
+			<!--Middle section-->
+			<div id = "mainMiddle">
+				<!--A section to display the form inside the middle section-->
+				<div id = "checkout">
+					<!--Top part of the form section-->
+					<div id = "checkoutTop">CHECKOUT</div>
+					
+					<div id = "topImg"><img src = "../images/store/logo2.png" width = "200" height = "200" alt = "logo"></div>
+					
+					<!--Middle part of the form section-->
+					<div id = "checkoutMiddle">
+						<form name = "customerDetails">
+							<label class = "personal" for = "firstName">First Name</label>
+							<input type = "text" name = "firstName" id = "firstName" placeholder = "Enter your first name" onchange = "validateName('First name', this.value)">
+								
+							<label class = "personal" for = "lastName">Last Name</label>
+							<input type = "text" name = "lastName" id = "lastName" placeholder = "Enter your last name" onchange = "validateName('Last Name', this.value)">
+								
+							<label class = "personal" for = "emailAddress">Email</label>
+							<input type = "text" name = "emailAddress" id = "emailAddress" placeholder = "Enter your email" onchange = "validateEmail(this.value)">
+								
+							<label class = "personal" for = "address">Shipping Address</label>
+							<textarea name = "address" id = "address" rows= "7" onchange = "validateAddress(this.value)"></textarea>
+								
+							<label class = "personal" for = "cardNumber">Credit Card Number</label>
+							<input type = "text" name = "cardNumber" id = "cardNumber" placeholder = "xxxx xxxxxx xxxxx" onchange = "validateCardNumber(this.value)">
+					
+							<label class = "personal" for = "csn">CSN</label>
+							<input type = "text" name = "csn" id = "csn" placeholder = "1234" onchange = "validateCSN(this.value)">
+
+							<label class = "personal" for = "expireDate">Expiration Date</label>
+							<input type="month" id="expireDate" name="expireDate">
+						</form>
+					</div>
+					
+					<!--Bottom part of the form section-->
+					<div id = "checkoutBottom">Bill Total
+						<div id = "total">LKR 0</div>
+						
+						<hr>
+						
+						<button class = "handleOrder" type = "button" onclick = "validateForm()">Place Order</button>
+						<button class = "handleOrder" type = "button" onclick = "clearOrder()">Reset Order</button>
+					</div>
+					
+					<!--A section to display the invoice inside the middle section-->
+					<div id = "orderSummary"> 
+						<!--A section to display the title of the invoice section-->
+						<div id = "summaryTitle">ORDER SUMMARY</div>
+						
+						<!--A section to display the personal information of the customer inside the invoice section-->
+						<div class = "orderSummaryTop">
+							<div id = "displayDetails"></div>
+							<hr>
+						</div>
+						
+						<!--A section to display the slected products by the customer inside the invoice section-->
+						<div class = "orderSummaryTop">
+							<div id = "displaySelectedProducts"></div>
+							<hr>
+						</div>
+						
+						<!--A section to display the total bill inside the invoice section-->
+						<div id = "orderSummaryBottom">Bill Total
+							<div id = "finalTotal"></div>
+							<hr>
+							<button id = "summaryButton" type = "button" onclick = "closeOrderSummary()">CLOSE</button>
+						</div>
+					</div>
+				</div>
+				
+				<!--A section to display the products inside the middle section-->
+				<div id = "products">
+					<!--Categorizing products inside the products section-->
+					<div class = "productCategories" id = "instruments" >Instruments</div>
+					
+					<hr>
+					
+					<!--Container holding a specific category of products inside the products section-->
+					<div class = "productSet">
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/guitar-brown.jpg" alt = "Acoustic Guitar">
+							<p class = "description">Acoustic Guitar</p>
+							<p class = "price">LKR 10,000</p>
+							<form>
+								<label class = "qtyLabel" for = "guitarQuantity">QTY</label>
+								<input class = "qty" id = "guitarQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br><br>
+								
+								<input class = "color" type = "radio" id = "guitarBrown" name = "color" value = "Brown" onchange = "document.images[2].src = '../images/store/guitar-brown.jpg'" checked>
+								<label for = "guitarBrown">Brown</label>
+								<input class = "color" type = "radio" id = "guitarBlack" name = "color" value = "Black" onchange = "document.images[2].src = '../images/store/guitar-black.jpg'">
+								<label for = "guitarBlack">Black</label>
+								<input class = "color" type = "radio" id = "guitarRed" name = "color" value = "Red" onchange = "document.images[2].src = '../images/store/guitar-red.jpg'">
+								<label for = "guitarRed">Red</label><br>
+								
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Acoustic Guitar')">Add To Cart</button>
+							</form>
+						</div>
+						
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/violin-brown.jpg" alt = "Violin">
+							<p class = "description">Violin</p>
+							<p class = "price">LKR 7,500</p>
+							<form>
+								<label class = "qtyLabel" for="violinQuantity">QTY</label>
+								<input class = "qty" id = "violinQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br><br>
+								
+								<input class = "color" type = "radio" id = "violinBrown" name = "color" value = "Brown" onchange = "document.images[3].src = '../images/store/violin-brown.jpg'" checked>
+								<label for = "violinBrown">Brown</label>
+								<input class = "color" type = "radio" id = "violinBlack" name = "color" value = "Black" onchange = "document.images[3].src = '../images/store/violin-black.jpg'">
+								<label for = "violinBlack">Black</label>
+								<input class = "color" type = "radio" id = "violinWhite" name = "color" value = "White" onchange = "document.images[3].src = '../images/store/violin-white.jpg'">
+								<label for = "violinWhite">White</label><br>
+								
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Violin')">Add To Cart</button>
+							</form>
+						</div>
+						
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/piano-brown.jpg" alt = "Piano">
+							<p class = "description">Piano</p>
+							<p class = "price">LKR 50,000</p>
+							<form>
+								<label class = "qtyLabel" for="pianoQuantity">QTY</label>
+								<input class = "qty" id = "pianoQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br><br>
+								
+								<input class = "color" type = "radio" id = "pianoBrown" name = "color" value = "Brown" onchange = "document.images[4].src = '../images/store/piano-brown.jpg'" checked>
+								<label for = "pianoBrown">Brown</label>
+								<input class = "color" type = "radio" id = "pianoBlack" name = "color" value = "Black" onchange = "document.images[4].src = '../images/store/piano-black.jpg'">
+								<label for = "pianoBlack">Black</label>
+								<input class = "color" type = "radio" id = "pianoWhite" name = "color" value = "White" onchange = "document.images[4].src = '../images/store/piano-white.jpg'">
+								<label for = "pianoWhite">White</label><br>
+								
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Piano')">Add To Cart</button>
+							</form>
+						</div>
+						
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/drums.jpg" alt = "Drum Set">
+							<p class = "description">Drum Set</p>
+							<p class = "price">LKR 20,000</p>
+							<form>
+								<label class = "qtyLabel" for="drumQuantity">QTY</label>
+								<input class = "qty" id = "drumQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br>
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Drum Set')">Add To Cart</button>
+							</form>
+						</div>
+						
+					</div>
+					
+					<hr>
+					<!--Categorizing products inside the products section-->
+					<div id = "vintageItems" class = "productCategories">Vintage Items</div>
+					<hr>
+					
+					<!--Container holding a specific category of products inside the products section-->
+					<div class = "productSet">
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/harmonica.jpg" alt = "Harmonica">
+							<p class = "description">Harmonica</p>
+							<p class = "price">LKR 5,000</p>
+							<form>
+								<label class = "qtyLabel" for="harmonicaQuantity">QTY</label>
+								<input class = "qty" id = "harmonicaQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br>
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Harmonica')">Add To Cart</button>
+							</form>
+						</div>
+						
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/gramophone.jpg" alt = "Gramophone">
+							<p class = "description">Gramophone</p>
+							<p class = "price">LKR 10,000</p>
+							<form>
+								<label class = "qtyLabel" for="gramophoneQuantity">QTY</label>
+								<input class = "qty" id = "gramophoneQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br>
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Gramophone')">Add To Cart</button>
+							</form>
+						</div>
+					</div>
+					
+					<hr>
+					<!--Categorizing products inside the products section-->
+					<div id = "albums" class = "productCategories">Albums</div>
+					<hr>
+					
+					<!--Container holding a specific category of products inside the products section-->
+					<div class = "productSet">
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/thriller.jpg" alt = "Thriller Cover">
+							<p class = "description">Thriller</p>
+							<p class = "price">LKR 4,000</p>
+							<form>
+								<label class = "qtyLabel" for="thrillerQuantity">QTY</label>
+								<input class = "qty" id = "thrillerQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br>
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Thriller')">Add To Cart</button>
+							</form>
+						</div>
+						
+					</div>
+					
+					<hr>
+					<!--Categorizing products inside the products section-->
+					<div id = "tickets" class = "productCategories">Tickets</div>
+					<hr>
+					
+					<!--Container holding a specific category of products inside the products section-->
+					<div class = "productSet">
+						<!--Container holding each product inside the productSet-->
+						<div class = "productContainer">
+							<img src = "../images/store/kuweni.jpg" alt = "Kuweni Ticket">
+							<p class = "description">Kuweni Concert Ticket</p>
+							<p class = "price">LKR 2,500</p>
+							<form>
+								<label class = "qtyLabel" for = "kuweniQuantity">QTY</label>
+								<input class = "qty" id = "kuweniQuantity" type = "number" name = "quantity" min = "0" max = "3" value = "0"><br>
+								<button class = "addCart" name = "addToCart" type = "button" onclick = "displayTotal(this.form, 'Kuweni Concert Ticket')">Add To Cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--Bottom part of the middle section-->
+			<div id = "mainBottom">
+				<!--A scetion to display back to top button insdie the bottom part-->
+				<div id = "backToTop">
+					<a href="#mainTop" id = "backToTopButton">Back To Top</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--Start footer section-->
+		<div class = "footerBar">
+			<footer>
+				<div class = "footerContent">
+				<a class = "pageName" >ELENI</a>
+					<ul class = "links">
+						<li><a href = "eleni-site-map.html">Site Map</a></li>
+						<li><a href = "eleni-page-author-student1.html">Developed by Harsha Senarath</a></li>
+					</ul>
+				<a class = "rights">Copyright © All rights reserved</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

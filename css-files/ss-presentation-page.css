@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/*Styling to all the elements*/
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+  	text-decoration : none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Styling the body section*/
+body{
+	background: rgba(103,88,69,0.4);
+	background-image: url("../images/presentation-page/homePageImg.jpg"), url("../images/presentation-page/homePageImgOver.jpg"),linear-gradient(60deg, rgba(103,88,69,0.8) 50%, rgba(235,206,127,0.4) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-blend-mode: lighten;
+	background-position: center;
+	background-size: cover;
+}
+
+/*Container which holds all the other containers*/
+#main {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+/*Styling for the div tag inside main with the id "logoContainer" before the animation*/
+#logoContainer {
+	position: absolute;
+	bottom: -100%;
+	left: 47%;
+	animation: animation1 1.5s forwards, animation2 1.8s forwards 1.8s;
+	width: 400px;
+	height: 400px;
+	background-image: url("../images/presentation-page/logo1.png");
+}
+
+/*Styling for the div tag inside main with the id "logoContainer" after the animation*/
+#logoContainer:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0px;
+	width: 400px;
+	height: 400px;
+	background-image: url("../images/presentation-page/logo2.png");
+}
+
+/*Move logoContainer from bottom to middle*/
+@keyframes animation1 {
+	from {
+		bottom: -100%;
+	}
+	
+	to {
+		bottom: 19%;
+	}
+}
+
+/*Making the logoContainer dissappear as it moves left from the middle*/
+@keyframes animation2 {
+	from {
+		left: 47%;
+		width: 400px;
+	}
+	
+	to {
+		left: 67%;
+		width: 0px;
+	}
+}
+
+/*Styling for the div tag inside main with the id "titleContainer"*/
+#titleContainer {
+	position: absolute;
+	top: 50px;
+	left: 100px;
+	overflow: hidden;
+	width: auto;
+	height: auto;
+	line-height: 100px; 
+	font-weight: 500;
+	color: white;	
+}
+
+/*Styling for the div tag inside titleContainer with the id "title"*/
+#title {
+	position: relative;
+	left: -100%;
+	animation: animation3 1.5s forwards;
+	border-radius: 30px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.8);
+	font-size: 100px;
+	letter-spacing: 20px;	
+}
+
+/*Making the titleContainer appear from left*/
+@keyframes animation3 {
+	from {
+		left: -100%;
+	}
+	
+	to {
+		left: 0%
+	}
+}
+
+/*Styling for the div tag inside main with the id "nameContainer"*/
+#nameContainer {
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	overflow: hidden;
+	width: 480px;
+	height: 480px;
+	line-height: 70px; 
+	font-weight: 600;
+}
+
+/*Styling for the div tags inside nameContainer with the class name "names"*/
+.names {
+	position: relative;
+	left: -100%;
+	animation: animation4 1.8s forwards 1.8s;
+	margin-top: 30px;
+	border-radius: 20px;
+	width: 445px;
+	height: 70px;
+	padding: 5px;
+	font-size: 30px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+/*Making the nameContainer appear from left*/
+@keyframes animation4 {
+	from {
+		left: -100%;
+	}
+	
+	to {
+		left: 5%
+	}
+}
+
+/*Stylings for footer*/
+.footerBar{
+	position: absolute;
+	bottom: 0px;
+	background : rgba(0,0,0,0.9);
+	width : 100%;
+}
+
+.footerBar footer{
+	position : relative;
+	display : flex;
+	max-width : calc(100% - 100px);
+	margin : 0 auto;
+	height : 90px;
+	align-items : center;
+	justify-content : space-between;
+}
+
+footer .footerContent{
+	display : flex;
+	align-items : center;
+}
+
+footer .footerContent .links{
+	margin-left : 100px;
+	display : flex;
+	padding-left : 20px;
+}
+
+
+.footerContent .links li{
+	list-style : none;
+	line-height : 70px;
+	padding-left : 200px;
+	color : #fff;
+}
+
+.footerContent .links li a{
+	color : #fff;
+	font-size : 18px;
+	padding : 10px 15px;
+	border-radius : 10px;
+	transition : all 0.3s ease;
+}
+
+
+.footerContent .links li a:hover{
+	color : #000;
+	background : rgba(255,255,255,0.8);
+}
+
+.pageName{
+	color : #fff;
+	font-size : 25px;
+	position : absolute;
+	left : 0px;
+	padding : 10px;
+}
+
+.rights{
+	color : #fff;
+	position : absolute;
+	right : 0px;
+	padding : 10px;
+}
