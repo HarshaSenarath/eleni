@@ -1,0 +1,71 @@
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	flex: 1 1 100%;
+}
+
+body{
+	background-image: url("../images/author-page/Pattern.jpg");
+	background-repeat: no-repeat;
+	background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+
+.info{
+	width : 500px;
+	margin : 0 auto;
+	text-align : center;
+	padding : 10px;  
+}
+
+.info h2.heading1{
+	font-size : 43px;
+	text-align : center;
+	padding : 17px;
+	color : #000;
+}
+
+.infoCard{
+	display : flex;
+	align-items : center;
+}
+
+.content{
+	display : flex;
+	flex-wrap : wrap;
+	margin : 20px;
+	padding : 20px;
+	border : 5px solid #000;
+	border-radius : 30px;
+	color : #fff;
+	background : linear-gradient(75deg, rgba(103,88,69,0.9) 35%, rgba(235,206,127,0.9) 100%);	
+}
+
+.content .logoIcon{
+	width : 150px;
+	height : 150px;
+}
+
+
+.content h3.heading2{
+	font-size : 20px;
+	text-align : center;
+	padding : 8px;
+}
+
+.content p{
+	font-size: 15px;
+	font-family: 'Poppins',sans-serif;
+}
+
+.content a{
+	align-items : center;
+	margin: 10px 0;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	padding: 15px 0;
+	border-radius: 30px;
+}
