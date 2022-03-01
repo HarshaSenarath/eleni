@@ -1,0 +1,155 @@
+.clr_dropdown{
+	padding-left: 1154px;
+	position: fixed;
+	padding-top: 110px;
+}
+
+.clr_dropdown label{
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	padding: 2px;
+	border-radius: 2px;	
+}
+
+.clr_dropdown select{
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	cursor: pointer;
+}
+
+#image{
+	max-width: 500px;
+	max-height: 600px;
+	object-fit: cover;
+	cursor: pointer;
+	border: 2px solid black;
+}
+
+.content_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-top : 110px;
+}
+
+.column{
+	width: 600px;
+	padding: 10px;
+}
+
+.thumbnail{
+	object-fit: cover;
+	max-width: 180px;
+	max-height: 100px;
+	cursor: pointer;
+	opacity: 0.75;
+	margin: 5px;
+	border: 2px solid black;
+}
+
+.thumbnail:hover{
+	opacity: 1;
+}
+
+
+.thumbnail_container{
+	max-width : 500px;
+	display: flex;
+	min-height: 100px;
+	align-items: center;
+}
+
+
+.paragraph{
+	z-index: 1;
+	display: none;
+}
+
+
+.paragraph{
+	text-align: justify;
+	font-size: 18px;
+	font-family: Baskerville Old Face;
+	background-color: rgba(235,206,127,0.4);
+	padding: 20px;
+	border-radius: 10px;
+	border: solid black;
+}
+
+p{
+	font-weight: bold;
+}
+
+.paragraph h2{
+	font-weight: 900;
+}
+
+#Queen_P{
+	display: block;
+}
+
+.footerBar{
+	position: absolute;
+	bottom: -200px;
+	background : rgba(0,0,0,0.9);
+	width : 100%;
+}
+
+.footerBar footer{
+	position : relative;
+	display : flex;
+	max-width : calc(100% - 100px);
+	margin : 0 auto;
+	height : 90px;
+	align-items : center;
+	justify-content : space-between;
+}
+
+footer .footerContent{
+	display : flex;
+	align-items : center;
+}
+
+footer .footerContent .links{
+	margin-left : 100px;
+	display : flex;
+	padding-left : 20px;
+}
+
+
+.footerContent .links li{
+	list-style : none;
+	line-height : 70px;
+	padding-left : 200px;
+	color : #fff;
+}
+
+.footerContent .links li a{
+	color : #fff;
+	font-size : 18px;
+	padding : 10px 15px;
+	border-radius : 10px;
+	transition : all 0.3s ease;
+}
+
+
+.footerContent .links li a:hover{
+	color : #000;
+	background : rgba(255,255,255,0.8);
+}
+
+.pageName{
+	color : #fff;
+	font-size : 25px;
+	position : absolute;
+	left : 0px;
+	padding : 10px;
+}
+
+.rights{
+	color : #fff;
+	position : absolute;
+	right : 0px;
+	padding : 10px;
+}

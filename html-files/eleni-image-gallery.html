@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>ELENI Gallery </title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale=1">
+		<link rel = "stylesheet" href = "../css-files/ss-navigation-bar.css">
+		<link rel = "stylesheet" href = "../css-files/ss-gallery.css">
+		<link rel = "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/77ecd00b75.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<!--Start nav bar section-->
+		<div class="navigationBar">
+			<nav>
+				<input type="checkbox" id="showSearch">
+				<div class="navBarContent">
+					<div class="logo"><img src = "../images/navigation-bar/logo.png" class = "logoIcon" alt = "logo"></div>
+					<ul class="linksToPages">
+						<li><a href="eleni-main-page.html">Home</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li>
+							<a href="eleni-store.html" class="desktop-link">Store</a>
+							<input type="checkbox">
+							<ul>
+								<li><a href="eleni-store.html">Instruments</a></li>
+								<li><a href="eleni-store.html">Vintage Items</a></li>
+								<li><a href="eleni-store.html">Albums</a></li>
+								<li><a href="eleni-store.html">Tickets</a></li>
+							</ul>
+						</li>
+						<li><a href="eleni-quiz.html">Take Quiz</a></li>
+						<li><a href="eleni-query-form.html">Contact Us</a></li>
+						<li><a href="eleni-student-details.html">About Us</a></li>
+					</ul>
+				</div>
+			  <label for="showSearch" class="searchIcon"><i class="fas fa-search"></i></label>
+			  <form action="#" class="searchBox">
+				<input type="text" placeholder="Type to Search" required>
+			  </form>
+			</nav>
+		</div>
+		
+		<!--Background & Font Colour-->
+			<div class = "clr_dropdown">
+				<label> Font Color: </label>
+				<select onchange = "fontcolor(this.value)">
+						<option value = ""> Default </option>
+						<option value = "#ff80df"> Pink </option>
+						<option value = "blue"> Blue </option>
+						<option value = "green"> Green </option>
+						<option value = "red"> Red </option>
+				</select>
+
+				<label> Background Color: </label>
+				<select onchange = "backcolor(this.value)">
+						<option value = ""> Default </option>
+						<option value = "#ff80df"> Pink </option>
+						<option value = "blue"> Blue </option>
+						<option value = "green"> Green </option>
+						<option value = "red"> Red </option>
+				</select>
+			</div>
+
+		<!--Gallery-->
+		<div class = "content_wrapper">
+
+			<div class = "column">
+				<img id = "image"  src = "../images/image-gallery/Queen.jpg">
+				
+				<div class = "thumbnail_container">
+					<img class = "thumbnail active" src = "../images/image-gallery/Queen.jpg" alt = "Queen Band" onmouseover = "dislpayStuff('../images/image-gallery/Queen.jpg', 'Queen_P')"> 
+					<img class = "thumbnail" src = "../images/image-gallery/Michael.jpg" alt = "Michael Jackson" onmouseover = "dislpayStuff('../images/image-gallery/Michael.jpg', 'Michael_P')"> 
+					<img class = "thumbnail" src = "../images/image-gallery/Beethovan.jpg"  alt = "Ludwig van Beethovan" onmouseover = "dislpayStuff('../images/image-gallery/Beethovan.jpg', 'Beethovan_P')"> 
+					<img class = "thumbnail" src = "../images/image-gallery/Guitar.jpg" alt = "Guitar" onmouseover = "dislpayStuff('../images/image-gallery/Guitar.jpg', 'Guitar_P')"> 
+					<img class = "thumbnail" src = "../images/image-gallery/Amaradewa.jpg" alt = "W.D. Amaradewa" onmouseover = "dislpayStuff('../images/image-gallery/Amaradewa.jpg', 'Amaradewa_P')"> 
+				</div>
+			</div>
+			
+			<div class = "column">
+				<div class = "txt">
+					<div class = "paragraph" id = "Queen_P">
+						<h2><b> Queen Band </b></h2>
+						<br>
+						<p> Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+						<br>
+						<p>	Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularize the music video format.</p>
+					</div>
+					<div class = "paragraph" id = "Michael_P">
+						<h2><b> Michael Jackson </b></h2>
+						<br>
+						<p>Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, and dancer. Dubbed the "King of Pop", he is regarded as one of the most significant cultural figures of the 20th century. Through stage and video performances, he popularized complicated dance moves such as the moonwalk, to which he gave the name, and the robot. His sound and style have influenced artists of various genres, and his contributions to music, dance, and fashion, along with his publicized personal life, made him a global figure in popular culture.</p>
+					</div>
+					<div class = "paragraph" id = "Beethovan_P">
+						<h2><b> Ludwig van Beethovan </b></h2>
+						<br>
+						<p>Ludwig van Beethoven (/ˈlʊdvɪɡ væn ˈbeɪtoʊvən/ (About this soundlisten); German: [ˈluːtvɪç fan ˈbeːtˌhoːfn̩] (About this soundlisten); baptised 17 December 1770 – 26 March 1827) was a German composer and pianist. Beethoven remains one of the most admired composers in the history of Western music; his works rank amongst the most performed of the classical music repertoire. His works span the transition from the classical period to the romantic era in classical music. His career has conventionally been divided into early, middle, and late periods. The "early" period, during which he forged his craft, is typically considered to have lasted until 1802. From 1802 to around 1812, his "middle" period showed an individual development from the "classical" styles of Joseph Haydn and Wolfgang Amadeus Mozart, and is sometimes characterized as "heroic". During this time, he began to suffer increasingly from deafness. In his "late" period from 1812 to his death in 1827, he extended his innovations in musical form and expression.</p>
+					</div>
+					<div class = "paragraph" id = "Guitar_P">
+						<h2><b> Guitar </b></h2>
+						<br>
+						<p> The guitar is a fretted musical instrument that typically has six strings. It is held flat against the player's body and played by strumming or plucking the strings with the dominant hand, while simultaneously pressing the strings against frets with the fingers of the opposite hand. A plectrum or individual finger picks may by be used to strike the strings. The sound of the guitar is projected either acoustically, by means of a resonant chamber on the instrument, or amplified by an electronic pickup and an amplifier. </p>
+					</div>
+					<div class = "paragraph" id = "Amaradewa_P">
+						<h2><b> W.D. Amaradewa </b></h2>
+						<br>
+						<p> Sri Lankabhimanya Wannakuwattawaduge Don Albert Perera (Sinhala: වන්නකුවත්තවඩුගේ දොන් ඇල්බට් පෙරෙරා; Tamil: டபிள்யூ. டி. அமரதேவா; 5 December 1927 – 3 November 2016), better known by his adopted name Amaradeva, was a prominent Sri Lankan vocalist, violinist and composer. Primarily using traditional instruments like sitars, tablas and harmoniums, Amaradeva incorporated Sinhala folk music with Indian ragas in his work. Many consider Pandit Amaradeva's contribution to the development of Sinhala music as unmatched; hence, he is occasionally cited as the "Maestro of Sri Lankan Music" (Sinhala: හෙළයේ මහා ගාන්දර්වයා).  </p>
+					</div>
+				</div>
+			</div>
+
+			<script type = "text/javascript">
+				function dislpayStuff(image, id){
+					document.getElementById("Queen_P").style.display = "none";
+					document.getElementById("Michael_P").style.display = "none";
+					document.getElementById("Beethovan_P").style.display = "none";
+					document.getElementById("Guitar_P").style.display = "none";
+					document.getElementById("Amaradewa_P").style.display = "none";
+					document.images[1].src = image;
+					document.getElementById(id).style.display = "block";
+				}
+				
+				function removeDetails(id){
+					document.getElementById(id).style.display = "none";
+				}
+				
+				function fontcolor (value) {
+					document.body.style.color=value;
+				}
+        
+				function backcolor (value) {
+					document.body.style.backgroundColor=value;
+				}
+			</script>
+
+			<!--Start footer section-->
+			<div class="footerBar">
+				<footer>
+				  <div class="footerContent">
+					<a class = "pageName" >ELENI</a>
+					<ul class="links">
+					  <li><a href="eleni-site-map.html">Site Map</a></li>
+					  <li><a href="eleni-page-author-student4.html">Developed by Kalana Kariyawasam</a></li>
+					</ul>
+					<a class = "rights" >Copyright © All rights reserved.</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+	</body>	
+</html>
