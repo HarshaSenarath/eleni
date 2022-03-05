@@ -1,0 +1,76 @@
+
+
+var questions=[{
+    "question":" 1.What is the name of The Beatles first album?",
+    "option1":" Please Please Me",
+    "option2": "With the Beatles",
+    "option3":"Help!",
+    "option4":"All You Need Is Love",
+    "answer":"1",
+},
+{ "question": "2.Which former One Direction member released Watermelon Sugar and Adore You?",
+"option1":"Harry Styles",
+"option2":"Zayn",
+"option3":"Niall Horan",
+"option4":"Liam Payne",
+"answer":"1",
+
+},
+{ "question":"3.Which female artist released the single Rolling in the Deep? ",
+"option1":"Celine Dion",
+"option2":"Adele",
+"option3":"Ariana Grande",
+"option4":"Nicky Minaj",
+"answer":"2",
+},{
+    "question":"4.Which band recorded the theme song to Friends?",
+    "option1":"SteelHeart",
+    "option2":"One Direction",
+    "option3":"ColdPlay",
+    "option4":" The Rembrandts",
+    "answer":"4",
+},{
+    "question":" 5.Which American rock band had a hit in the eighties with the Eye of the Tiger?",
+    "option1":"Dynatzy",
+    "option2":"The Beatles",
+    "option3":"Survivor",
+    "option4":"AC/DC",
+    "answer":"3",
+},{
+    "question":" 6.What was the name of Eminem's first UK single release in 1999?",
+    "option1":"My Name Is",
+    "option2":"Not Afraid",
+    "option3":"Mockingbird",
+    "option4":"When Im Gone",
+    "answer":"1",
+},{
+    "question":"7.Which singer has the most Twitter followers?",
+    "option1":"Justin Bieber",
+    "option2":"Taylor Swift",
+    "option3":"Lady Gaga",
+    "option4":"Eminem",
+    "answer":"1",
+},{
+    "question":"8.According to the lyrics of Kelis Milkshake , released in 2003, where does her milkshake bring all the boys?",
+    "option1":"To The House",
+    "option2":"To The Club",
+    "option3":"To The Party",
+    "option4":"To The Yard",
+    "answer":"4",
+},{
+    "question":"9.Which mathematical symbol was the title of Ed Sheerans first album in 2011?",
+    "option1":" - ",
+    "option2":" + ",
+    "option3":" * ",
+    "option4":" $ ",
+    "answer":"2",
+},{
+    "question":" 10.In a 2011 single, Maroon 5 claimed to have moves like which member of the Rolling Stones?",
+    "option1":"Carlo Little",
+    "option2":"Brian Jones",
+    "option3":"Mick Taylor",
+    "option4":"Mick Jagger",
+    "answer":"4",
+}
+
+]

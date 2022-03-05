@@ -1,0 +1,96 @@
+#svgJS g:hover polyline,
+#svgJS g:hover line {
+	fill: none;
+	stroke-width: 2;
+	stroke: black;
+}
+
+#svgJS g:hover g text,
+#svgJS g:hover text {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#svgJS g:hover polygon,
+#svgJS g:hover rect,
+#svgJS g:focus polygon,
+#svgJS g:focus rect {
+	fill: rgb(204, 156, 0);
+	stroke: black;
+	stroke-width: 2;
+	cursor: pointer;
+}
+
+.column{
+	text-align: center;
+	padding-top: 200px;
+}
+
+.column h1{
+	text-decoration: underline;
+}
+
+.footerBar{
+	background : rgba(0,0,0,0.9);
+	width : 100%;
+	position: fixed;
+	bottom: 0px;
+}
+
+.footerBar footer{
+	position : relative;
+	display : flex;
+	max-width : calc(100% - 100px);
+	margin : 0 auto;
+	height : 90px;
+	align-items : center;
+	justify-content : space-between;
+}
+
+footer .footerContent{
+	display : flex;
+	align-items : center;
+}
+
+footer .footerContent .links{
+	margin-left : 100px;
+	display : flex;
+	padding-left : 20px;
+}
+
+
+.footerContent .links li{
+	list-style : none;
+	line-height : 70px;
+	padding-left : 200px;
+	color : #fff;
+}
+
+.footerContent .links li a{
+	color : #fff;
+	font-size : 18px;
+	padding : 10px 15px;
+	border-radius : 10px;
+	transition : all 0.3s ease;
+}
+
+
+.footerContent .links li a:hover{
+	color : #000;
+	background : rgba(255,255,255,0.8);
+}
+
+.pageName{
+	color : #fff;
+	font-size : 25px;
+	position : absolute;
+	left : 0px;
+	padding : 10px;
+}
+
+.rights{
+	color : #fff;
+	position : absolute;
+	right : 0px;
+	padding : 10px;
+}

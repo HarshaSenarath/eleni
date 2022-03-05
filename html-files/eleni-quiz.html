@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>ELENI Quiz</title>
+        <link href="../css-files/ss-quiz.css" rel="stylesheet">
+        <link rel = "stylesheet" href = "../css-files/ss-navigation-bar.css">
+        <link rel = "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://kit.fontawesome.com/77ecd00b75.js" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+        	<!--Start nav bar section-->
+	<div class="navigationBar" id = "navigationBar">
+        <nav>
+          <input type="checkbox" id="showSearch">
+          <div class="navBarContent">
+          <div class="logo"><img src = "../images/navigation-bar/logo.png" class = "logoIcon" alt = "logo"></div>
+            <ul class="linksToPages">
+              <li><a href="eleni-main-page.html">Home</a></li>
+              <li><a href="eleni-image-gallery.html">Gallery</a></li>
+              <li>
+                <a href="eleni-store.html" class="desktop-link">Store</a>
+                <input type="checkbox">
+                <ul>
+                  <li><a href="eleni-store.html">Instruments</a></li>
+                  <li><a href="eleni-store.html">Vintage Items</a></li>
+                  <li><a href="eleni-store.html">Albums</a></li>
+                  <li><a href="eleni-store.html">Tickets</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Take Quiz</a></li>
+			  <li><a href="eleni-query-form.html">Contact Us</a></li>
+		      <li><a href="eleni-student-details.html">About Us</a></li>
+            </ul>
+          </div>
+          <label for="showSearch" class="searchIcon"><i class="fas fa-search"></i></label>
+          <form action="#" class="searchBox">
+            <input type="text" placeholder="Type to Search" required>
+          </form>
+        </nav>
+        </div>
+        <br>
+        <br>
+            
+        <div id="quizcontainer" class=" container hide">
+            <div class="title">music quiz</div>
+            <div style="font-weight: bold" id="quiztimeleft" class=' timer hide'></div>
+                <div id="question"class="question"></div>
+                <label class="option"><input type="radio" name="option" value="1"/><span id="opt1"></span></label>
+                <label class="option"><input type="radio" name="option" value="2"/><span id="opt2"></span></label>
+                <label class="option"><input type="radio" name="option" value="3"/><span id="opt3"></span></label>
+                <label class="option"><input type="radio" name="option" value="4"/><span id="opt4"></span></label>
+                <button id="nextbutton" class="next-btn" onclick="loadnextquestion();">Next Question</button>
+                
+         </div>
+       
+        <div id="result" class="result hide" > </div><!--shows the score-->
+        <div id="correctcount" class="correctcount hide"> </div>
+        <div id="timeused" class="timeused hide"></div>
+         <div id="correctanswerdiv" class="correctanswerdiv hide"></div>
+           
+      
+        
+        <br>
+        <br>
+
+        <div class="controls">
+            <div id="rules" class="rules" >
+                <h1 >Welcome to the Quiz</h1>
+                <h2>Rules and Regulations!</h2>
+
+                <ol>
+                    <li>You have 10 questions to answer.</li>
+                    <li>You get 1 minute to complete the quiz.</li>
+                    <li>You only have 1 attempt at the quiz.</li>
+                    <li>Once the quiz has started you cannot pause or stop.</li>
+                    <li> You will be awarded 2 marks for each correct answer.</li>
+                    <li>You will be penalised -1 mark for incorrect answers.</li>
+                </ol>
+
+                
+                <h1 style="font-size: 25px;">Good luck !!!</h1>
+                </div>
+
+            <button id="startbutton" class="start-btn" onclick="startquiz();">Start Quiz</button>
+        </div>
+        <script src="../js-files/js-question.js"></script>
+        <script src="../js-files/js-quiz.js"></script>
+
+        <!--Start footer section-->
+	<div class="footerBar">
+        <footer>
+          <div class="footerContent">
+            <a class = "pageName" >ELENI</a>
+            <ul class="links">
+              <li><a href="eleni-site-map.html">Site Map</a></li>
+              <li><a href="eleni-page-author-student3.html">Developed by Dan Dias Abeyesinghe</a></li>
+            </ul>
+            <a class = "rights" >Copyright © All rights reserved</a>
+          </div>
+        </footer>
+        </div>
+ 
+        
+    </body>
+</html>
